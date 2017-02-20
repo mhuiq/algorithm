@@ -19,7 +19,7 @@ public class ListOperation {
         ListNode head = listNode, tail = listNode.next;
         while (tail != null) {
         	ListNode tmp = tail.next;
-        	head.next = tmp;
+			listNode.next = tmp;
         	tail.next = head;
         	head = tail;
         	tail = tmp;
@@ -36,7 +36,7 @@ public class ListOperation {
 		ListOperation lo = new ListOperation();
 		ListNode tail = null;
 		ListNode root = null;
-		for (int i=0; i<10; ++i) {
+		for (int i=0; i<109; ++i) {
 			if (tail == null) {
 				tail = new ListNode(i);
 				root = tail;
